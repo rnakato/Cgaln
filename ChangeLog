@@ -1,0 +1,39 @@
+2013-12-25  Ryuichiro Nakato <rnakato@iam.u-tokyo.ac.jp>
+	Version 1.2.3
+	- bug fix in cgaln.c
+
+2012-01-18  Ryuichiro Nakato <rnakato@iam.u-tokyo.ac.jp>
+	Version 1.2.2
+	- refine some functions
+
+2012-01-09  Ryuichiro Nakato <rnakato@iam.u-tokyo.ac.jp>
+	Version 1.2.1
+	- bug fix in readtable.c
+
+2012-01-08  Ryuichiro Nakato <rnakato@iam.u-tokyo.ac.jp>
+	Version 1.2.0
+	- rename "main.c" to "cgaln.c"
+	- add "instance.c", "cgaln.h", "maketable.h", "readfasta.h", "util.h", "BA.h", "NA.h" and "dp.h"
+	- refine several functions
+	- change Cgaln output from <stdout> to <file stream> (add "-o" option)
+	- become possible to output with fasta format (change "-Ens" option to "-otype" option)
+	- become possible to specify table directory name (default: CgalnTable)
+	- become possible to specify input file which is not in current directory
+	- "maketable" makes a summary txt in the table directory
+	- merge tables of multifasta file
+	- merge ".logpois" and ".logpois_2" into ".poistable"
+	- some bug fixes in extending HSPs, DP and output
+Important note: Cgaln and maketable version 1.2.0 are not compatible with the previous version. Please remake all tables when upgrading.
+
+2010-09-06  Ryuichiro Nakato <rnakato@iam.u-tokyo.ac.jp>
+	Version 1.1.0
+	- some bug fixes in Finding HSPs with shorter seed.
+	- change parameter for hsp chaining.
+	- add "util.c" with some functions.
+	- change the part of Cgaln output (time, blocksize etc.) to <stderr>.
+	- Add this ChangeLog
+
+2009-12-18  Ryuichiro Nakato <rnakato@iam.u-tokyo.ac.jp>
+	Version 1.0.0
+	First commit.
+
