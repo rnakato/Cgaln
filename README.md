@@ -3,25 +3,10 @@ Fast and memory-efficient program for pairwise alignment of whole
 genomic sequences
 
 #1. Overview
-Cgaln (Coarse grained alignment) is a program designed to align a pair of whole genomic sequences 
-of not only bacteria but also entire chromosomes of vertebrates on a nominal desktop computer. 
-Cgaln performs an alignment job in two steps, at the block level and then at the nucleotide level. 
-The former "coarse-grained" alignment can explore genomic rearrangements and reduce the regions 
-to be analyzed in the next step. The latter is devoted to detailed alignment within the limited regions 
-found in the first stage. The output of Cgaln is “glocal” in the sense that rearrangements are taken 
-into consideration while each alignable region is extended as long as possible. Thus, Cgaln is not only 
-fast and memory-efficient, but also can filter noisy outputs without missing the most important 
-homologous segment pairs.
+Cgaln (Coarse grained alignment) is a program designed to align a pair of whole genomic sequences of not only bacteria but also entire chromosomes of vertebrates on a nominal desktop computer. Cgaln performs an alignment job in two steps, at the block level and then at the nucleotide level. The former "coarse-grained" alignment can explore genomic rearrangements and reduce the regions to be analyzed in the next step. The latter is devoted to detailed alignment within the limited regions found in the first stage. The output of Cgaln is “glocal” in the sense that rearrangements are taken into consideration while each alignable region is extended as long as possible. Thus, Cgaln is not only fast and memory-efficient, but also can filter noisy outputs without missing the most important homologous segment pairs.
 
 #2. Install
-Cgaln and its associated program maketable are written in ANSI-C, and can be executed on a 
-Linux OS. To build Cgaln from the source, first download the archive file from 
-http://www.genome.ist.i.kyoto-u.a.c.jp/~aln_user/cgaln/
-and extract it with:
-
-% tar -xvzf Cgaln_1_*_*.tar.gz
-
-Then, go to the new directory and type:
+Cgaln and its associated program maketable are written in ANSI-C, and can be executed on a Linux OS. To build Cgaln from the source, go to the Cgaln directory and type:
 
 % make
 
@@ -29,9 +14,7 @@ Cgaln requires gcc for compilation. (http://gcc.gnu.org/)
 
 
 #3. Usage
-Before running Cgaln, each genomic sequence to be aligned should be preprocessed by 
-maketable. Cgaln and maketable accept single- or multi-fasta files. If the input file is in 
-multi-fasta format, Cgaln treats all the entry sequences individually, and outputs the unified results.
+Before running Cgaln, each genomic sequence to be aligned should be preprocessed by maketable. Cgaln and maketable accept single- or multi-fasta files. If the input file is in multi-fasta format, Cgaln treats all the entry sequences individually, and outputs the unified results.
 
 ##3.1 Repeat mask
 The repetitive regions in input sequences should be soft masked by other repeat-masking tools such as 
@@ -50,9 +33,9 @@ are required when the user wants to use Cgaln with different block size or k-mer
 for setting specific k-mer or block size are as follows.
 
 Options:
- -o  specify output directory (default: CgalnTable)
- -K#  specifies k-mer size (11 as default)
- -BS# specifies block size (10000 as default)
+* -o  specify output directory (default: CgalnTable)
+* -K#  specifies k-mer size (11 as default)
+* -BS# specifies block size (10000 as default)
 
 For example, the command
 
@@ -144,11 +127,7 @@ inter-HSP regions.
 
 
 #4. References
-Nakato, R., and Gotoh, O. (2008). A novel method for reducing computational complexity of whole 
-genome sequence alignment. In Proceedings of the 6th Asia-Pacific Bioinformatics Conference 
-(APBC2008), pages 101-110.
-
 Nakato, R., and Gotoh, O. (2010). Cgaln: fast and space-efficient whole-genome alignment, BMC Bioinformatics, 11:224, 2010
-
+Nakato, R., and Gotoh, O. (2008). A novel method for reducing computational complexity of whole genome sequence alignment. In Proceedings of the 6th Asia-Pacific Bioinformatics Conference (APBC2008), pages 101-110.
 
 Please direct bug reports and questions about usage to rnakato@iam.u-tokyo.ac.jp.
