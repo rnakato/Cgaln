@@ -25,9 +25,7 @@ Maketable is used to convert each genomic sequence into binary files that are re
 
 % ./maketable [options] <sequence> 
 
-Four kinds of file, *.seedtable, *.blktable, *.poistable and *.txt, are made in the
-directory ./<output directory>/ (default: CgalnTable). The seedtable  and blktable for
-reverse complement are also constructed at the same time. If the input file is in multi-fasta format,
+Four kinds of file, *.seedtable, *.blktable, *.poistable and *.txt, are made in the directory ./output directory/ (default: CgalnTable). The seedtable  and blktable for reverse complement are also constructed at the same time. If the input file is in multi-fasta format,
 corresponding table of all fastas is merged into one table. It should be noted that different tables
 are required when the user wants to use Cgaln with different block size or k-mer sizes. The options
 for setting specific k-mer or block size are as follows.
@@ -57,30 +55,28 @@ while other formats may be chosen with -optype option.
 
 
 options: (default in parentheses)
- -t:	table directory (default: CgalnTable)
- -r:	both strands (forward strand only)
- -b:	output block level alignments (output nucleotide level alignments)
- -nc:	no chaining (with chaining)
- -ia:	do iterative alignment (off)
- -pr:	print outlines of regions for iterative alignment (off)
- -fc:	remove inconsistent colonies at the block level (off)
- -cs:	remove inconsistent HSPs at the HSP-chaining (off)
- -noext:	(when -ia is on) skip gapped extension of HSPs (don't skip)
- -sr:	examine short reverse complement (off)
- -k#:	seed weight/width; -k1: 11/18; -k2: 12/19; -k3: 13/20 (11/18)
- -BS#:	block size (10000)
- -X#:	X drop-off value at block-level (4000)
- -R#:	ratio between X drop-off score and gap penalty at block-level (1500)
- -nl:	don't insert delimiters between outputs for multifasta file (on)
- -otype:	output format; 0: gnuplot; 1: ensfile; 2: fasta (gnuplot format)
+* -t:	table directory (default: CgalnTable)
+* -r:	both strands (forward strand only)
+* -b:	output block level alignments (output nucleotide level alignments)
+* -nc:	no chaining (with chaining)
+* -ia:	do iterative alignment (off)
+* -pr:	print outlines of regions for iterative alignment (off)
+* -fc:	remove inconsistent colonies at the block level (off)
+* -cs:	remove inconsistent HSPs at the HSP-chaining (off)
+* -noext:	(when -ia is on) skip gapped extension of HSPs (don't skip)
+* -sr:	examine short reverse complement (off)
+* -k#:	seed weight/width; -k1: 11/18; -k2: 12/19; -k3: 13/20 (11/18)
+* -BS#:	block size (10000)
+* -X#:	X drop-off value at block-level (4000)
+* -R#:	ratio between X drop-off score and gap penalty at block-level (1500)
+* -nl:	don't insert delimiters between outputs for multifasta file (on)
+* -otype:	output format; 0: gnuplot; 1: ensfile; 2: fasta (gnuplot format)
 
-Important note: When "-otype2 (fasta format)" is selected, the size of output file may be
- quite large (about several times larger than input files). This option is not appropriate
- for whole-genome comparisons of large genomes such as mammals.
+Important note: When "-otype2 (fasta format)" is selected, the size of output file may be quite large (about several times larger than input files). This option is not appropriate for whole-genome comparisons of large genomes such as mammals.
 
 Examples:
 For standard use, we recommend the options 
- 
+
 % ./Cgaln -r -ia seq1.fasta seq2.fasta -o result.dot 
  
 which outputs the alignment result between seq1.fasta and seq2.fasta to result.dot in a format 
@@ -127,7 +123,7 @@ inter-HSP regions.
 
 
 #4. References
-Nakato, R., and Gotoh, O. (2010). Cgaln: fast and space-efficient whole-genome alignment, BMC Bioinformatics, 11:224, 2010
-Nakato, R., and Gotoh, O. (2008). A novel method for reducing computational complexity of whole genome sequence alignment. In Proceedings of the 6th Asia-Pacific Bioinformatics Conference (APBC2008), pages 101-110.
+* Nakato, R., and Gotoh, O. (2010). Cgaln: fast and space-efficient whole-genome alignment, BMC Bioinformatics, 11:224, 2010
+* Nakato, R., and Gotoh, O. (2008). A novel method for reducing computational complexity of whole genome sequence alignment. In Proceedings of the 6th Asia-Pacific Bioinformatics Conference (APBC2008), pages 101-110.
 
 Please direct bug reports and questions about usage to rnakato@iam.u-tokyo.ac.jp.
