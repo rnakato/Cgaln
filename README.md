@@ -23,7 +23,7 @@ RepeatMasker.
 ##3.2 make tables
 Maketable is used to convert each genomic sequence into binary files that are read by Cgaln.
 
-% ./maketable [options] <sequence> 
+% ./maketable [options] \<sequence\> 
 
 Four kinds of file, *.seedtable, *.blktable, *.poistable and *.txt, are made in the directory ./output directory/ (default: CgalnTable). The seedtable  and blktable for reverse complement are also constructed at the same time. If the input file is in multi-fasta format,
 corresponding table of all fastas is merged into one table. It should be noted that different tables
