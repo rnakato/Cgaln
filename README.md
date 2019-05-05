@@ -13,9 +13,6 @@ Cgaln and its associated program maketable are written in ANSI-C, and can be exe
     cd Cgaln
     make
 
-Cgaln requires gcc for compilation. (http://gcc.gnu.org/)
-
-
 ## 3. Usage
 Before running Cgaln, each genomic sequence to be aligned should be preprocessed by maketable. Cgaln and maketable accept single- or multi-fasta files. If the input file is in multi-fasta format, Cgaln treats all the entry sequences individually, and outputs the unified results.
 
