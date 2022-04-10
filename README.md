@@ -125,7 +125,6 @@ inter-HSP regions.
 
 ## 4. References
 * Nakato, R., and Gotoh, O. (2010). Cgaln: fast and space-efficient whole-genome alignment, BMC Bioinformatics, 11:224, 2010
-* Nakato, R., and Gotoh, O. (2008). A novel method for reducing computational complexity of whole genome sequence alignment. In Proceedings of the 6th Asia-Pacific Bioinformatics Conference (APBC2008), pages 101-110.
 
 ## 5. Contact
-Please direct bug reports and questions about usage to rnakato@iam.u-tokyo.ac.jp.
+Please direct bug reports and questions about usage to rnakato@iqb.u-tokyo.ac.jp.
