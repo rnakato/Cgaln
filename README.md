@@ -122,9 +122,5 @@ With `-sr` option, Cgaln tries to find short inversions at the NA level. In this
 not perform gapped HSP extension, and examines both the forward and reverse strands within 
 inter-HSP regions.
 
-
 ## 4. References
 * Nakato, R., and Gotoh, O. (2010). Cgaln: fast and space-efficient whole-genome alignment, BMC Bioinformatics, 11:224, 2010
-
-## 5. Contact
-Please direct bug reports and questions about usage to rnakato@iqb.u-tokyo.ac.jp.
